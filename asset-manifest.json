@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/confirmticket-frontend/static/css/main.824d8c5b.css",
+    "main.js": "/confirmticket-frontend/static/js/main.bea5882a.js",
+    "static/js/787.12e79b28.chunk.js": "/confirmticket-frontend/static/js/787.12e79b28.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/confirmticket-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/confirmticket-frontend/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/confirmticket-frontend/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/confirmticket-frontend/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/confirmticket-frontend/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/steering-wheel.png": "/confirmticket-frontend/static/media/steering-wheel.f880339f65b197741924.png",
+    "static/media/panda2.png": "/confirmticket-frontend/static/media/panda2.3b54b5cb5acb4ca2a0d2.png",
+    "static/media/panda1.png": "/confirmticket-frontend/static/media/panda1.ae22af36c0e8704dded5.png",
+    "static/media/ticket.png": "/confirmticket-frontend/static/media/ticket.7d8f3b86ccb941b9113f.png",
+    "static/media/next.png": "/confirmticket-frontend/static/media/next.2ada07ce04d9ef903770.png",
+    "static/media/sidebus.png": "/confirmticket-frontend/static/media/sidebus.9b98c9e0061c5c0885db.png",
+    "static/media/bus.png": "/confirmticket-frontend/static/media/bus.86424fcc123d474e5dcb.png",
+    "static/media/train.png": "/confirmticket-frontend/static/media/train.b703dbee0555dc39ea13.png",
+    "static/media/trainside.png": "/confirmticket-frontend/static/media/trainside.f9e33577e90b6bf5ef12.png",
+    "static/media/logo.svg": "/confirmticket-frontend/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/confirmticket-frontend/index.html",
+    "main.824d8c5b.css.map": "/confirmticket-frontend/static/css/main.824d8c5b.css.map",
+    "main.bea5882a.js.map": "/confirmticket-frontend/static/js/main.bea5882a.js.map",
+    "787.12e79b28.chunk.js.map": "/confirmticket-frontend/static/js/787.12e79b28.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.824d8c5b.css",
+    "static/js/main.bea5882a.js"
+  ]
+}
