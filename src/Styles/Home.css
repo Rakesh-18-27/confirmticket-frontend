@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+.containerr {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .text {
+    font-size: 100px;
+    font-family: 'Noto Serif', serif;
+    text-shadow: 6px 15px 10px rgba(0, 0, 0, 0.3);
+    color: #00103e;
+  }
+  
+  @media (max-width: 768px) {
+    .text {
+      font-size: 36px;
+    }
+  }
+  

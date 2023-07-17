@@ -1,0 +1,26 @@
+
+  
+  .navbar-brand-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .navbar-links-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+  .n{
+    background-color: rgb(200, 226, 255);
+  }
+  

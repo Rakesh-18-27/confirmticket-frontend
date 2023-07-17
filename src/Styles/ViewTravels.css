@@ -1,0 +1,12 @@
+
+
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    color: white;
+    background-color: #4038b7;
+  }
+  
