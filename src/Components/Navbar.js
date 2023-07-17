@@ -163,7 +163,7 @@ const handleMode=()=>{
       <div style={{ marginTop: "70px", paddingTop: "20px" }}>
         {/* Content below the navbar */}
         <Routes>
-          <Route path="/" element={<Home mode={mode} />} />
+          <Route path="/confirmticket-frontend/" element={<Home mode={mode} />} />
           <Route path="/viewtravels" element={<ViewTravels width={width} mode={mode} />} />
           <Route path="/login" element={<App flag={flag} customer={handleCustomer} mode={mode} />} />
           <Route path="/dashboard" element={<Dashboard customer={customer} mode={mode} />}>
