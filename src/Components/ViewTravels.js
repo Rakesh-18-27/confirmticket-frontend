@@ -155,11 +155,12 @@ console.log(e);
   <div className="container">
     <div className="row mt-3 justify-content-center align-items-center p-3">
       <div className={`col-md-3 ${props.width<520?`mt-3`:``}`}>
+        <label style={{color:`${props.mode==`dark`?`white`:`black`}`}} htmlFor="source" className="form-label nun">Source</label>
         <input
           type="text"
           id="source"
           ref={source}
-          placeholder="Search Source"
+          style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
           className="form-control form-control-md"
           onChange={handleSourceSuggestion}
         />
@@ -187,12 +188,13 @@ console.log(e);
         <img src={Arrow} alt="Arrow" style={{ height: 50, width: 50 }} />
       </div>
       <div className={`col-md-3 ${props.width<520?`mt-3`:``}`}>
+      <label style={{color:`${props.mode==`dark`?`white`:`black`}`}} htmlFor="destination" className="form-label nun">Destination</label>
         <input
           type="text"
           id="destination"
           ref={destination}
-          placeholder="Search Destination"
-          className="form-control form-control-md"
+          style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
+          className="form-control text-danger form-control-md"
           onChange={handleDestinationSuggestion}
         />
         <div
@@ -216,7 +218,10 @@ console.log(e);
         </div>
       </div>
       <div className={`col-md-3 ${props.width<520?`mt-3`:``}`}>
-        <input type="date" ref={date} className="form-control form-control-md" />
+        <input type="date" ref={date} 
+        id="date"
+        style={{color:`${props.mode==`dark`?`white`:`black`}`,background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
+        className="form-control form-control-md" />
       </div>
       <div className={`col-md-auto d-flex justify-content-center ${props.width<520?`mt-3`:``}`}>
         <button className="btn btn-warning btn-lg" onClick={getTravels}>
@@ -232,7 +237,7 @@ console.log(e);
           // style={{ height: `30vh`, width: `100vh` }}
           className="container d-flex justify-content-center align-items-center p-4"
         >
-          <h1 className="serif">Unleash Search Power</h1>
+          <h1 className="serif gradient-text">Unleash Search Power</h1>
         </div>
       ) : (
         <div className="container d-flex justify-content-center align-items-center p-3">

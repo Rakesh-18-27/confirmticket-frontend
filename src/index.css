@@ -27,3 +27,23 @@
   background-color: #ffffff;
   opacity: 0;
 }
+.gradient-text1 {
+  background: linear-gradient(45deg, #94d2ff, #08127f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* #destination::placeholder {
+  background: linear-gradient(360deg, #ff0a0a, #0e00d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#source::placeholder {
+  background: linear-gradient(360deg, #0e00d5, #ff0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#date::placeholder {
+  background: linear-gradient(360deg, #0e00d5, #ff0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */

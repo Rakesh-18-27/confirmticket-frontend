@@ -74,7 +74,7 @@ const [customer,setCustomer]=useState({})
           <div className="form-group d-flex justify-content-center">
             <img
               className="img-fluid"
-              style={{ height: 70, width: 70 }}
+              style={{ height: 70, width: 70 ,borderRadius:`50px 50px 50px 50px`}}
               src={panda}
               alt="Panda"
             />

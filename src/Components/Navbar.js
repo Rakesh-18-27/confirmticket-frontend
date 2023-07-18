@@ -93,16 +93,16 @@ const handleMode=()=>{
         </div>
         
         <div className="col-lg-4 col-md-8 col-12 d-flex justify-content-between align-items-center ">
-          <NavLink to={"/"} className={`navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-home ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Home</NavLink>
-          <NavLink to={"/viewtravels"} className={`navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-map-marker ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Travels</NavLink>
-          <NavLink to={"/login"} className={`navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-sign-in ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Login</NavLink>
+          <NavLink to={"/"} className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-home ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Home</NavLink>
+          <NavLink to={"/viewtravels"} className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-map-marker ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Travels</NavLink>
+          <NavLink to={"/login"} className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-sign-in ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Login</NavLink>
           <div className={`d-flex justify-content-center align-items-center"`}>
-            <NavLink className={`navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className={`fa fa-user-plus ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Signup</NavLink>
+            <NavLink className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className={`fa fa-user-plus ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Signup</NavLink>
           </div>
           <div className={`d-flex justify-content-center align-items-center nun"`}>
-            <NavLink className={`navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} onClick={handleMode}>
+            <NavLink className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} onClick={handleMode}>
             {
-              mode==`light`?(<><i style={{fontSize:`21px`}} className={`fa fa-moon-o ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;&nbsp;{mode}</>):(<><i style={{fontSize:`21px`}} className={`fa fa-sun-o ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;&nbsp;{mode}</>)
+              mode==`light`?(<><i style={{fontSize:`21px`}} className={`fa fa-moon-o ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;&nbsp;{mode}<i className="fa fa-sun-o"></i></>):(<><i style={{fontSize:`21px`}} className={`fa fa-sun-o ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;&nbsp;{mode}<i className="fa fa-moon-o"></i></>)
             }
             </NavLink>
           </div>
