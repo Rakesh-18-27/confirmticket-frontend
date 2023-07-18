@@ -18,6 +18,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gradient-text2 {
+  background: linear-gradient(0deg, #0e00d5, #ff0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .scrollable-container::-webkit-scrollbar {
   width: 0.5em;
   background-color: #F5F5F5;
@@ -27,6 +32,10 @@
   background-color: #ffffff;
   opacity: 0;
 }
+.transparent-input {
+  background-color: transparent;
+}
+
 .gradient-text1 {
   background: linear-gradient(45deg, #94d2ff, #08127f);
   -webkit-background-clip: text;

@@ -111,7 +111,7 @@ const handleMode=()=>{
 
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
-          <div className="modal-content">
+          <div className={`modal-content ${mode==`dark`?`bg-dark text-light`:`bg-light text-dark`}`}>
             <div className="modal-header">
               <h1 className="modal-title noto fs-5" id="exampleModalLabel">Create Account</h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

@@ -155,13 +155,13 @@ console.log(e);
   <div className="container">
     <div className="row mt-3 justify-content-center align-items-center p-3">
       <div className={`col-md-3 ${props.width<520?`mt-3`:``}`}>
-        <label style={{color:`${props.mode==`dark`?`white`:`black`}`}} htmlFor="source" className="form-label nun">Source</label>
+        <label  htmlFor="source" className={`${props.mode==`dark`?`gradient-text1`:`gradient-text`} form-label nun`}>Source</label>
         <input
           type="text"
           id="source"
           ref={source}
           style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
-          className="form-control form-control-md"
+          className={`form-control form-control-md ${props.mode==`dark`?`text-light`:`text-dark`}`}
           onChange={handleSourceSuggestion}
         />
         <div
@@ -188,13 +188,13 @@ console.log(e);
         <img src={Arrow} alt="Arrow" style={{ height: 50, width: 50 }} />
       </div>
       <div className={`col-md-3 ${props.width<520?`mt-3`:``}`}>
-      <label style={{color:`${props.mode==`dark`?`white`:`black`}`}} htmlFor="destination" className="form-label nun">Destination</label>
+      <label  htmlFor="destination" className={`form-label nun ${props.mode==`dark`?`gradient-text1`:`gradient-text`}`}>Destination</label>
         <input
           type="text"
           id="destination"
           ref={destination}
           style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
-          className="form-control text-danger form-control-md"
+          className={`form-control form-control-md ${props.mode==`dark`?`text-light`:`text-dark`}`}
           onChange={handleDestinationSuggestion}
         />
         <div
@@ -218,6 +218,7 @@ console.log(e);
         </div>
       </div>
       <div className={`col-md-3 ${props.width<520?`mt-3`:``}`}>
+        <label className={`form-label nun ${props.mode==`dark`?`gradient-text1`:`gradient-text`}`}  >Enter your date of birth</label>
         <input type="date" ref={date} 
         id="date"
         style={{color:`${props.mode==`dark`?`white`:`black`}`,background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
@@ -246,9 +247,9 @@ console.log(e);
       )
     ) : (
       <>
-        <h3 className="noto">Available Buses</h3>
+        <h3 className={`nun gradient-text2`}>Available Buses</h3>
         <div className="table-responsive">
-          <table className="table table-light table-hover nun">
+          <table className={`table ${props.mode==`dark`?`table-dark`:`table-light`} table-striped table-hover nun`}>
             <thead>
               <tr className="text-center">
                 <th>Travel Type</th>

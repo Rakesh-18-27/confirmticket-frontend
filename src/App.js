@@ -1,4 +1,4 @@
-  import logo from "./logo.svg";
+import logo from "./logo.svg";
   import "./App.css";
   import { useNavigate, useSearchParams } from "react-router-dom";
   import { useEffect, useRef, useState } from "react";
@@ -79,23 +79,45 @@ const [customer,setCustomer]=useState({})
               alt="Panda"
             />
           </div>
-          <div className="form-group p-2">
-            <input
+          <div className=" p-2">
+          {/* <input
               type="text"
               onMouseDown={handleMouseDown}
               ref={email}
               placeholder="Enter Email"
-              className="form-control"
-            />
-          </div>
-          <div className="form-group p-2">
+              style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
+              className="form-control form-control-md"
+            /> */}
+            <label className={`form-label ${props.mode==`dark`?`gradient-text`:`gradient-text1`}`}>Email</label>
             <input
+          type="text"
+          id="email"
+          ref={email}
+          style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
+          className={`form-control form-control-md ${props.mode==`dark`?`text-light`:`text-dark`}`}
+          onMouseDown={handleMouseDown}
+        />
+          </div>
+          <div className="p-2">
+          <label className={`form-label ${props.mode==`dark`?`gradient-text`:`gradient-text1`}`}>Password</label>
+            <input
+          type="password"
+          id="password"
+          ref={password}
+          style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
+          className={`form-control form-control-md ${props.mode==`dark`?`text-light`:`text-dark`}`}
+          onMouseDown={handleOnChange}
+        />
+            {/* <input
               type="password"
               onMouseDown={handleOnChange}
               ref={password}
-              placeholder="Enter Password"
-              className="form-control"
-            />
+              style={{backgroundColor:`transperent`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
+              className="form-control form-control-md"
+            /> */}
+          </div>
+          <div className="form-group">
+            <p className={`form-text text-danger mx-2`}>Forgot Your Password ?</p>
           </div>
           <div className="form-group p-2 d-flex justify-content-around">
             <button type="reset" className="btn btn-danger">
