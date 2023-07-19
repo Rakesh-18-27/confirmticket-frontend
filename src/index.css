@@ -11,7 +11,6 @@
 }
 .navlink{
   text-decoration: none;
-  color: #425664;
 }
 .gradient-text {
   background: linear-gradient(45deg, #0e00d5, #ff0a0a);
@@ -38,6 +37,11 @@
 
 .gradient-text1 {
   background: linear-gradient(45deg, #94d2ff, #08127f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text3 {
+  background: linear-gradient(10deg, #94d2ff, #08127f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

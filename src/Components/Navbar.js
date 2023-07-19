@@ -80,7 +80,7 @@ const handleMode=()=>{
 
   return (
     <>
-      <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }} className={`row git  rounded-30px ${mode==`dark`?`bg-black`:`bg-light`}`}>
+      <div style={{position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }} className={`row git  rounded-30px ${mode==`dark`?`bg-black`:`bg-white`}`}>
         <div className="col-lg-8 col-md-4 e  d-flex align-items-center">
           <img src={Ticket} className="image-fluid p-2 d-inline" style={{ height: 70, width: 70 }} alt="Ticket" />
           <NavLink
@@ -93,12 +93,14 @@ const handleMode=()=>{
         </div>
         
         <div className="col-lg-4 col-md-8 col-12 d-flex justify-content-between align-items-center ">
-          <NavLink to={"/"} className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-home ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Home</NavLink>
+          <NavLink to={"/"} className={`gradient-text1  navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-home ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Home</NavLink>
           <NavLink to={"/viewtravels"} className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-map-marker ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Travels</NavLink>
           <NavLink to={"/login"} className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`}><i className={`fa fa-sign-in ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Login</NavLink>
-          <div className={`d-flex justify-content-center align-items-center"`}>
-            <NavLink className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className={`fa fa-user-plus ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Signup</NavLink>
-          </div>
+         {
+          Object.keys(customer)==0?( <div className={`d-flex justify-content-center align-items-center"`}>
+          <NavLink className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className={`fa fa-user-plus ${width<380?`mx-3`:`mx-3`}`} aria-hidden="true"></i>&nbsp;Signup</NavLink>
+        </div>):(<div></div>)
+         }
           <div className={`d-flex justify-content-center align-items-center nun"`}>
             <NavLink className={`gradient-text1 navbar-link nun ${mode==`dark`?`text-light`:`text-dark`}`} onClick={handleMode}>
             {
@@ -167,7 +169,7 @@ const handleMode=()=>{
           <Route path="/" element={<Home mode={mode} />} />
           <Route path="/viewtravels" element={<ViewTravels width={width} mode={mode} />} />
           <Route path="/login" element={<App flag={flag} customer={handleCustomer} mode={mode} />} />
-          <Route path="/dashboard" element={<Dashboard customer={customer} mode={mode} />}>
+          <Route path="/dashboard" element={<Dashboard customer={customer} mode={mode} width={width}/>}>
             <Route path="/dashboard/" element={<ViewTravels customer={customer} mode={mode} width={width} />} />
             <Route path="/dashboard/bookings" element={<Booking mode={mode} customer={customer} />} />
             <Route path="/dashboard/find" element={<Find mode={mode} />} />

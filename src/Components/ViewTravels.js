@@ -172,7 +172,7 @@ console.log(e);
             border: "1px solid black",
             display: `${sourceSuggestions.length > 0 ? "block" : "none"}`,
             position: "absolute",
-            width: "100%",
+            width:`${props.width>400?`20%`:`80%`}`,
             backgroundColor: "#fff",
             zIndex: "1",
           }}
@@ -205,7 +205,7 @@ console.log(e);
             border: "1px solid black",
             display: `${destinationSuggestions.length > 0 ? "block" : "none"}`,
             position: "absolute",
-            width: "100%",
+            width:`${props.width>400?`20%`:`80%`}`,
             backgroundColor: "#fff",
             zIndex: "1",
           }}
