@@ -18,8 +18,8 @@ const Dashboard = (props) => {
             borderRadius: "10px",
             position: "fixed",
             top: 70,
-            left: 0,
-            right: 0,
+            right:0,
+            zIndex:`50`
           }}
           className={`row p-2 mt-5 nun ${
             props.mode === "dark" ? "bg-black" : "bg-light"
@@ -47,9 +47,17 @@ const Dashboard = (props) => {
         // Render the full navigation for larger screens
         <div
           // style={{ borderRadius: "10px", position: "fixed", top: 70, left: 0, right: 0 }}
-          className={`row p-2 mb-5 nun ${
+          className={`row p-2 m-2 nun ${
             props.mode === "dark" ? "bg-black" : "bg-light"
           } d-flex fixed justify-content-around align-items-center`}
+          style={{
+            borderRadius: "10px",
+            position: "fixed",
+            top: 61,
+            right:0,
+            left:0,
+            zIndex:`50`
+          }}
         >
           <div
             className={`col-auto col-lg-auto d-flex justify-content-center align-items-center`}

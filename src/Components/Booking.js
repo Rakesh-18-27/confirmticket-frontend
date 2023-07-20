@@ -38,7 +38,7 @@ const [flag,setFlag]=useState(false)
 
   return (
     <>
-      <div style={{ backgroundColor: `rgb(202, 206, 250)`,borderRadius:`20px`}} className="p-3">
+      <div  className="p-3">
         <div className="row row-cols-md-2 row-cols-lg-3">
           {bookings.map((booking, index) => {
               const isCancel=true
@@ -50,43 +50,23 @@ const [flag,setFlag]=useState(false)
                  isCancel= false;
               }
             return (
-              <div className="col mb-4">
-                <div className="bg-white rounded p-3" style={{boxShadow:`3px 3px 14px black`}}>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 className="noto d-inline">From: </h6>
-                      <span className="nun">{booking.from}</span>
-                    </div>
-                    <div>
-                      {booking.vechilType === "BUS" ? (
-                        <img src={bus} style={{ height: 40, width: 40 }} alt="Bus" />
-                      ) : (
-                        <img src={train} style={{ height: 40, width: 40 }} alt="Train" />
-                      )}
-                    </div>
-                    <div>
-                      <h6 className="noto d-inline">To: </h6>
-                      <span className="nun">{booking.to}</span>
-                    </div>
-                  </div>
-                  <div className="mt-2">
-                    <b className="noto">Booked Date:&nbsp;</b><span className="nun">{booking.ticketBookedOn}</span>
-                  </div>
-                  <div className="mt-2">
-                    <b className="noto">Reseved Date:&nbsp;</b><span className="nun">{booking.ticketReservedOn}</span>
-                  </div>
-                  <div className="mt-2">
-                    <b className="noto">Reseved SeatNo:&nbsp;</b><span className="nun">{booking.seatingNo}</span>
-                  </div>
-                  <div className="d-flex justify-content-around align-items-center mt-2">
-                    <div>
-                         <button onClick={()=>viewstatus(booking.bookingId)} className={`btn btn-success `}>View Status </button>
-                    </div>
-                    <div>
-                         <button className={`btn btn-danger ${isCancel?(``):(`disabled`)}`}>Cancel </button>
-                    </div>
-                  </div>
-                  <div id={booking.bookingId} style={{display:`none`}}>
+              <>
+              
+              <div className={`card ${props.mode==`dark`?`bg-dark text-light`:`bg-light text-dark`}`}>
+    <div className="card-body">
+      <h5 className="card-title">Bus Ticket</h5>
+      <p className="card-text"><strong>Source:</strong> {booking.from}</p>
+      <p className="card-text"><strong>Destination:</strong> {booking.to}</p>
+      <p className="card-text"><strong>Booked Date:</strong> {booking.ticketBookedOn}</p>
+      <p className="card-text"><strong>Reserved Date:</strong> {booking.ticketReservedOn}</p>
+      <p className="card-text"><strong>Seat No:</strong> {booking.seatingNo}</p>
+      <div className="d-flex justify-content-between justify-content-center">
+        <button type="button" className="btn btn-primary"onClick={()=>viewstatus(booking.bookingId)}>View Status</button>
+        <button type="button" className="btn btn-secondary">Cancel</button>
+      </div>
+      
+    </div>
+    <div id={booking.bookingId} style={{display:`none`}}>
                 <div  className="scrollable-container mt-2" style={{height: `150px`, overflowY: `scroll`}}>
                     <p className="noto text-center  p-1 w-100" style={{position:`sticky`,top:0,backgroundColor:`rgb(137, 214, 150)`}}>{booking.vechilType} Status</p>
                     <div className="row"  >
@@ -95,7 +75,7 @@ const [flag,setFlag]=useState(false)
                             return(
                             <div className="col mt-2">
                                 <div id={`label${booking.bookingId}`} className="" style={{height:`20px`,width:`20px`,backgroundColor:`${route.split(" ").length>=3?(`lightgreen`):(`lightblue`)}`,borderRadius:`50px`}}></div>
-                                <label htmlFor={`label${booking.bookingId}`}>
+                                <label className={`${props.mode==`dark`?`text-light`:`text-dark`}`} htmlFor={`label${booking.bookingId}`}>
                                 {
                                     route.split(" ").length>=3?(route.split(" ")[0]):(route)
                                 }
@@ -107,9 +87,9 @@ const [flag,setFlag]=useState(false)
                     </div>
                 </div>
                 </div>
-
-                </div>
-              </div>
+  </div>
+ 
+  </>
             );
           })}
         </div>

@@ -60,3 +60,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 } */
+.table {
+  table-layout: fixed; /* Ensures equal width columns */
+  word-wrap: break-word; /* Allows text wrapping */
+}
+@media (max-width: 456px) {
+  .table {
+    width: 100%;
+  }
+}
+.border-box {
+  box-sizing: border-box;
+}
