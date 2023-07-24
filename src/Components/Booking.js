@@ -39,7 +39,7 @@ const [flag,setFlag]=useState(false)
   return (
     <>
       <div  className="p-3">
-        <div className="row row-cols-md-2 row-cols-lg-3">
+        <div className="row  d-flex jusify-content-between">
           {bookings.map((booking, index) => {
               const isCancel=true
               const date=new Date(booking.ticketBookedOn)
@@ -51,9 +51,9 @@ const [flag,setFlag]=useState(false)
               }
             return (
               <>
-              
-              <div className={`card ${props.mode==`dark`?`bg-dark text-light`:`bg-light text-dark`}`}>
-    <div className="card-body">
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 "> 
+              <div style={{border:`none`}} className={`  card ${props.mode==`dark`?`bg-black text-light`:``} `}>
+    <div className={`card-body m-2 rounded 30px ${props.mode==`dark`?`bg-dark text-light`:`bg-custom text-dark`}`}>
       <h5 className="card-title">Bus Ticket</h5>
       <p className="card-text"><strong>Source:</strong> {booking.from}</p>
       <p className="card-text"><strong>Destination:</strong> {booking.to}</p>
@@ -68,13 +68,13 @@ const [flag,setFlag]=useState(false)
     </div>
     <div id={booking.bookingId} style={{display:`none`}}>
                 <div  className="scrollable-container mt-2" style={{height: `150px`, overflowY: `scroll`}}>
-                    <p className="noto text-center  p-1 w-100" style={{position:`sticky`,top:0,backgroundColor:`rgb(137, 214, 150)`}}>{booking.vechilType} Status</p>
+                    <p className="noto text-center text-dark  p-1 w-100" style={{position:`sticky`,top:0,backgroundColor:`rgb(137, 214, 150)`}}>{booking.vechilType} Status</p>
                     <div className="row"  >
                         {
                         booking.routes.map((route,index)=>{
                             return(
                             <div className="col mt-2">
-                                <div id={`label${booking.bookingId}`} className="" style={{height:`20px`,width:`20px`,backgroundColor:`${route.split(" ").length>=3?(`lightgreen`):(`lightblue`)}`,borderRadius:`50px`}}></div>
+                                <div id={`label${booking.bookingId}`} className="d-flex justify-content-center align-items-center" style={{height:`20px`,width:`20px`,backgroundColor:`${route.split(" ").length>=3?(`lightgreen`):(`lightblue`)}`,borderRadius:`50px`}}>{route.split(" ").length>=3?(<i style={{fontSize:`30px`}} className="fa text-success fa-check-circle-o"></i>):(<></>)}</div>
                                 <label className={`${props.mode==`dark`?`text-light`:`text-dark`}`} htmlFor={`label${booking.bookingId}`}>
                                 {
                                     route.split(" ").length>=3?(route.split(" ")[0]):(route)
@@ -88,7 +88,7 @@ const [flag,setFlag]=useState(false)
                 </div>
                 </div>
   </div>
- 
+  </div> 
   </>
             );
           })}

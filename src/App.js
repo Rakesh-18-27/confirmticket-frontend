@@ -6,6 +6,7 @@ import logo from "./logo.svg";
   import open from './Assets/panda1.png'
   import closed from './Assets/panda2.png'
   import Footer from "./Components/Footer";
+import PasswordStatus from "./Components/PasswordStatus";
   function App(props) {
 
     const navigate = useNavigate();
@@ -16,6 +17,10 @@ const [customer,setCustomer]=useState({})
 
     const [panda,setPanda]=useState("")
     const [flag,setFlag]=useState(false)
+    const [validate,setValidate]=useState({
+      "str":``,
+      "color":`white`
+    })
 
 
     const login = () => {
@@ -34,6 +39,43 @@ const [customer,setCustomer]=useState({})
       );
     };
 
+    const validatePassword=()=>{
+   
+      let p=password.current.value
+      console.log(p,`------`);
+      const capital = /[A-Z]/;
+      const num = /[0-9]/;
+      if(p.length==0){
+        console.log(p.length,`--------`);
+        setValidate({
+          "str":``,
+          "color":``,
+          "width":``
+        })
+      }
+
+      if(p.length<6||!p.match(capital)||!p.match(num)){
+                setValidate({
+                  "str":"Weak",
+                  "color":"red",
+                  "width":"30"
+                })
+      }
+       if(p.length>6&&(p.match(capital)||p.match(num))){
+        setValidate({
+          "str":"Medium",
+          "color":"orange",
+          "width":"60"
+        })
+      }
+       if(p.length>6&&p.match(capital)&&p.match(num)){
+        setValidate({
+          "str":"Strong",
+          "color":"green",
+          "width":"100"
+        })
+      }
+    }
 
   const handleOnChange=(event)=>{
   setPanda(closed)
@@ -104,10 +146,12 @@ const [customer,setCustomer]=useState({})
           type="password"
           id="password"
           ref={password}
+          onChange={validatePassword}
           style={{background:`none`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
           className={`form-control form-control-md ${props.mode==`dark`?`text-light`:`text-dark`}`}
           onMouseDown={handleOnChange}
         />
+        <PasswordStatus validate={validate}></PasswordStatus>
             {/* <input
               type="password"
               onMouseDown={handleOnChange}
@@ -115,7 +159,9 @@ const [customer,setCustomer]=useState({})
               style={{backgroundColor:`transperent`,border:`none`,borderBottom:`1px solid ${props.mode==`dark`?`lightblue`:`darkblue`}`}}
               className="form-control form-control-md"
             /> */}
+            
           </div>
+
           <div className="form-group">
             <p className={`form-text text-danger mx-2`}>Forgot Your Password ?</p>
           </div>

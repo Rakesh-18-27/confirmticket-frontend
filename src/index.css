@@ -22,6 +22,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.scrollable-container{
+overflow: hidden;
+}
 .scrollable-container::-webkit-scrollbar {
   width: 0.5em;
   background-color: #F5F5F5;
@@ -44,6 +47,17 @@
   background: linear-gradient(10deg, #94d2ff, #08127f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.card{
+  border: none;
+}
+.bg-custom{
+  background-color: rgb(205 206 229 / 40%);
+}
+.password-strength-line {
+  border: none;
+  width: 100%;
+  margin-top: 5px;
 }
 /* #destination::placeholder {
   background: linear-gradient(360deg, #ff0a0a, #0e00d5);
